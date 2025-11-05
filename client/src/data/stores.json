@@ -1,0 +1,182 @@
+[
+  {
+    "store": "ar-es",
+    "code": "AR",
+    "name": "Argentina",
+    "icon": "/flags/ar.svg"
+  },
+  {
+    "store": "au-en",
+    "code": "AU",
+    "name": "Australia",
+    "icon": "/flags/au.svg"
+  },
+  {
+    "store": "at-de",
+    "code": "AT",
+    "name": "Austria",
+    "icon": "/flags/at.svg"
+  },
+  {
+    "store": "be-fr",
+    "code": "BE",
+    "name": "Belgium (Français)",
+    "icon": "/flags/be.svg"
+  },
+  {
+    "store": "be-nl",
+    "code": "BE",
+    "name": "Belgium (Nederlands)",
+    "icon": "/flags/be.svg"
+  },
+  {
+    "store": "br-pt",
+    "code": "BR",
+    "name": "Brazil",
+    "icon": "/flags/br.svg"
+  },
+  {
+    "store": "ca-en",
+    "code": "CA",
+    "name": "Canada (English)",
+    "icon": "/flags/ca.svg"
+  },
+  {
+    "store": "ca-fr",
+    "code": "CA",
+    "name": "Canada (Français)",
+    "icon": "/flags/ca.svg"
+  },
+  {
+    "store": "cl-es",
+    "code": "CL",
+    "name": "Chile",
+    "icon": "/flags/cl.svg"
+  },
+  {
+    "store": "co-es",
+    "code": "CO",
+    "name": "Colombia",
+    "icon": "/flags/co.svg"
+  },
+  {
+    "store": "dk-en",
+    "code": "DK",
+    "name": "Denmark",
+    "icon": "/flags/dk.svg"
+  },
+  {
+    "store": "fi-en",
+    "code": "FI",
+    "name": "Finland",
+    "icon": "/flags/fi.svg"
+  },
+  {
+    "store": "fr-fr",
+    "code": "FR",
+    "name": "France",
+    "icon": "/flags/fr.svg"
+  },
+  {
+    "store": "de-de",
+    "code": "DE",
+    "name": "Germany",
+    "icon": "/flags/de.svg"
+  },
+  {
+    "store": "ie-en",
+    "code": "IE",
+    "name": "Ireland",
+    "icon": "/flags/ie.svg"
+  },
+  {
+    "store": "it-it",
+    "code": "IT",
+    "name": "Italy",
+    "icon": "/flags/it.svg"
+  },
+  {
+    "store": "jp-ja",
+    "code": "JP",
+    "name": "Japan",
+    "icon": "/flags/jp.svg"
+  },
+  {
+    "store": "lu-de",
+    "code": "LU",
+    "name": "Luxembourg (Deutsch)",
+    "icon": "/flags/lu.svg"
+  },
+  {
+    "store": "lu-fr",
+    "code": "LU",
+    "name": "Luxembourg (Français)",
+    "icon": "/flags/lu.svg"
+  },
+  {
+    "store": "mx-es",
+    "code": "MX",
+    "name": "Mexico",
+    "icon": "/flags/mx.svg"
+  },
+  {
+    "store": "nl-nl",
+    "code": "NL",
+    "name": "Netherlands",
+    "icon": "/flags/nl.svg"
+  },
+  {
+    "store": "nz-en",
+    "code": "NZ",
+    "name": "New Zealand",
+    "icon": "/flags/nz.svg"
+  },
+  {
+    "store": "no-en",
+    "code": "NO",
+    "name": "Norway",
+    "icon": "/flags/no.svg"
+  },
+  {
+    "store": "pt-pt",
+    "code": "PT",
+    "name": "Portugal",
+    "icon": "/flags/pt.svg"
+  },
+  {
+    "store": "es-es",
+    "code": "ES",
+    "name": "Spain",
+    "icon": "/flags/es.svg"
+  },
+  {
+    "store": "se-en",
+    "code": "SE",
+    "name": "Sweden",
+    "icon": "/flags/se.svg"
+  },
+  {
+    "store": "ch-de",
+    "code": "CH",
+    "name": "Switzerland (Deutsch)",
+    "icon": "/flags/ch.svg"
+  },
+  {
+    "store": "ch-fr",
+    "code": "CH",
+    "name": "Switzerland (Français)",
+    "icon": "/flags/ch.svg"
+  },
+  {
+    "store": "gb-en",
+    "code": "GB",
+    "name": "United Kingdom",
+    "icon": "/flags/gb.svg"
+  },
+  {
+    "store": "us-en",
+    "code": "US",
+    "name": "United States",
+    "icon": "/flags/us.svg"
+  }
+]
