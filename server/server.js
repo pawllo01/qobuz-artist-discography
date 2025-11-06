@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Qobuz Artist Discography API' });
+});
+
 // api routes
 app.use('/search', searchRouter);
 app.use('/artist', artistRouter);
