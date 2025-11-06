@@ -19,6 +19,7 @@ export default function SearchArtist({ store, setError }: SearchArtistProps) {
   const [deferredInput, setDeferredInput] = React.useState<string>("");
   const [searchData, setSearchData] = React.useState<SearchData | null>(null);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const showImg = !window.location.hash && !searchData && !isLoading;
 
   React.useEffect(() => {
     const timeoutId = setTimeout(() => setDeferredInput(input), 500);
@@ -50,7 +51,7 @@ export default function SearchArtist({ store, setError }: SearchArtistProps) {
   }, [deferredInput, setError, store]);
 
   return (
-    <div className="flex flex-1 flex-col gap-4">
+    <div className={`flex flex-col gap-4 ${showImg ? "flex-1" : ""}`}>
       <Search
         setInput={setInput}
         placeholder="Search artist by name or ID..."
@@ -76,13 +77,13 @@ export default function SearchArtist({ store, setError }: SearchArtistProps) {
           </h3>
         ))}
 
-      {!window.location.hash && !searchData && !isLoading && (
+      {showImg && (
         <div className="flex flex-1 items-center justify-center px-2">
           <img
             src="/undraw_people-search.svg"
             alt="People search"
             className="select-none"
-            style={{ height: "50vh" }}
+            style={{ height: "45vh" }}
           />
         </div>
       )}
