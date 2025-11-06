@@ -83,16 +83,6 @@ export default function App() {
           </div>
         )}
 
-        {!hash && !artist && (
-          <div className="mt-16 p-4" style={{ height: "50vh" }}>
-            <img
-              src="/undraw_people-search.svg"
-              alt="People search"
-              className="mx-auto max-h-full select-none"
-            />
-          </div>
-        )}
-
         {artist && <ArtistBio artist={artist} store={store} />}
 
         {artist && (

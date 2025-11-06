@@ -17,7 +17,7 @@ type SearchData = {
 export default function SearchArtist({ store, setError }: SearchArtistProps) {
   const [input, setInput] = React.useState<string>("");
   const [deferredInput, setDeferredInput] = React.useState<string>("");
-  const [searchData, setSearchData] = React.useState<SearchData>({});
+  const [searchData, setSearchData] = React.useState<SearchData | null>(null);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   React.useEffect(() => {
@@ -29,7 +29,7 @@ export default function SearchArtist({ store, setError }: SearchArtistProps) {
     if (!deferredInput) return;
 
     setError("");
-    setSearchData({});
+    setSearchData(null);
     setIsLoading(true);
 
     const fetchArtists = async () => {
@@ -50,11 +50,11 @@ export default function SearchArtist({ store, setError }: SearchArtistProps) {
   }, [deferredInput, setError, store]);
 
   return (
-    <div className="space-y-4">
+    <div className="flex flex-1 flex-col gap-4">
       <Search
         setInput={setInput}
         placeholder="Search artist by name or ID..."
-        className="lg:mx-auto lg:max-w-2xl"
+        className="w-full lg:mx-auto lg:max-w-2xl"
       />
 
       {isLoading && (
@@ -63,7 +63,7 @@ export default function SearchArtist({ store, setError }: SearchArtistProps) {
         </div>
       )}
 
-      {searchData.artists &&
+      {searchData?.artists &&
         (searchData.artists.length > 0 ? (
           <div className="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:justify-center">
             {searchData.artists.map((artist) => (
@@ -75,6 +75,17 @@ export default function SearchArtist({ store, setError }: SearchArtistProps) {
             No results found
           </h3>
         ))}
+
+      {!window.location.hash && !searchData && !isLoading && (
+        <div className="flex flex-1 items-center justify-center px-2">
+          <img
+            src="/undraw_people-search.svg"
+            alt="People search"
+            className="select-none"
+            style={{ height: "50vh" }}
+          />
+        </div>
+      )}
     </div>
   );
 }
