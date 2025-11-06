@@ -12,7 +12,7 @@ type ArtistBioProps = {
 
 export default function ArtistBio({ artist, store }: ArtistBioProps) {
   return (
-    <section className="my-4 rounded-xl bg-gray-700 p-6 shadow-lg">
+    <section className="rounded-xl bg-gray-700 p-6 shadow-lg">
       <div className="flex flex-col gap-y-2 md:flex-row md:items-center md:justify-between md:gap-x-6">
         <div className="shrink-0 md:order-1">
           {/* avatar */}

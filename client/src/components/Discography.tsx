@@ -123,7 +123,7 @@ export default function Discography({ albums, store }: DiscographyProps) {
   });
 
   return (
-    <section className="my-4">
+    <section>
       {/* heading + options */}
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-2xl leading-tight font-medium tracking-tight md:text-3xl dark:text-white">

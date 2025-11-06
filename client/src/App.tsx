@@ -66,19 +66,19 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <main className="mx-auto w-full max-w-7xl grow p-3 md:p-4">
+      <main className="mx-auto my-2 flex w-full max-w-7xl grow flex-col gap-4 p-3 md:p-4">
         <Header store={store} setStore={setStore} />
 
         <SearchArtist store={store} setError={setError} />
 
         {error && (
-          <Alert color="failure" className="text-md my-4 font-medium">
+          <Alert color="failure" className="text-md font-medium">
             Error: {error}
           </Alert>
         )}
 
         {isLoading && (
-          <div className="my-4 text-center">
+          <div className="text-center">
             <Spinner />
           </div>
         )}

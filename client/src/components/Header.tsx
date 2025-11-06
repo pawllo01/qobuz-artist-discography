@@ -10,7 +10,7 @@ type HeaderProps = {
 
 export default function Header({ store, setStore }: HeaderProps) {
   return (
-    <header className="relative mt-2 mb-4 flex flex-col items-center justify-between gap-x-4 gap-y-3 min-[400px]:flex-row lg:mb-8 lg:justify-center">
+    <header className="relative flex flex-col items-center justify-between gap-x-4 gap-y-3 min-[400px]:flex-row lg:mb-4 lg:justify-center">
       <h1 className="pb-1 text-2xl leading-none font-extrabold tracking-tight sm:text-3xl md:pb-1.5 md:text-4xl lg:text-5xl dark:text-white">
         Qobuz Artist Discography
       </h1>
