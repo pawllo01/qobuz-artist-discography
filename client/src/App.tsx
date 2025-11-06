@@ -65,7 +65,7 @@ export default function App() {
   }, [hash, store]);
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-dvh flex-col">
       <main className="mx-auto my-2 flex w-full max-w-7xl grow flex-col gap-4 p-3 md:p-4">
         <Header store={store} setStore={setStore} />
 
