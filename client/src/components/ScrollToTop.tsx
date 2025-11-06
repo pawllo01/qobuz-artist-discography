@@ -35,7 +35,7 @@ export default function ScrollToTop({ footerHeight }: ScrollToTopProps) {
   return (
     <Button
       aria-label="Scroll to top"
-      className={`fixed right-6 z-10 size-13 cursor-pointer rounded-full p-0 transition-all duration-200 sm:size-15 ${isVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+      className={`fixed right-6 z-10 size-15 cursor-pointer rounded-full p-0 transition-all duration-200 ${isVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       style={{ bottom: `${bottomOffset}px` }}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >

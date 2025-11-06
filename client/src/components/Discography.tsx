@@ -33,7 +33,9 @@ export default function Discography({ albums, store }: DiscographyProps) {
   const [sortBy, setSortBy] = React.useState<string>(
     () => localStorage.getItem("sort-by") || sortOptions[0],
   );
-  const [layoutGrid, setLayoutGrid] = React.useState<boolean>(true);
+  const [layoutGrid, setLayoutGrid] = React.useState<boolean>(
+    () => localStorage.getItem("layout-grid") !== "false",
+  );
   const [settings, setSettings] = React.useState<Record<SettingKey, boolean>>(
     () =>
       JSON.parse(
@@ -52,6 +54,10 @@ export default function Discography({ albums, store }: DiscographyProps) {
   React.useEffect(() => {
     localStorage.setItem("sort-by", sortBy);
   }, [sortBy]);
+
+  React.useEffect(() => {
+    localStorage.setItem("layout-grid", String(layoutGrid));
+  }, [layoutGrid]);
 
   React.useEffect(() => {
     localStorage.setItem("settings", JSON.stringify(settings));
@@ -121,7 +127,7 @@ export default function Discography({ albums, store }: DiscographyProps) {
       {/* heading + options */}
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-2xl leading-tight font-medium tracking-tight md:text-3xl dark:text-white">
-          Discography ({filteredAlbums.length} releases)
+          Discography - {filteredAlbums.length}&nbsp;releases
         </h3>
         <LayoutBtns
           layoutGrid={layoutGrid}
@@ -141,11 +147,13 @@ export default function Discography({ albums, store }: DiscographyProps) {
           />
           <ToggleSwitch
             label="Hi-Res only"
+            className="w-fit"
             checked={hiresOnly}
             onChange={setHiresOnly}
           />
           <ToggleSwitch
             label="Purchase only"
+            className="w-fit"
             checked={purchaseOnly}
             onChange={setPurchaseOnly}
           />
