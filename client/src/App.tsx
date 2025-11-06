@@ -35,6 +35,7 @@ export default function App() {
       return;
     }
     setError("");
+    setArtist(null);
 
     // cached artist
     const cacheKey = `${store}:${hash}`;
@@ -54,7 +55,6 @@ export default function App() {
         artistCache.current[cacheKey] = data;
         setArtist(data);
       } catch (error) {
-        setArtist(null);
         setError(error instanceof Error ? error.message : String(error));
       } finally {
         setIsLoading(false);
@@ -83,13 +83,15 @@ export default function App() {
           </div>
         )}
 
-        {artist && <ArtistBio artist={artist} store={store} />}
+        {hash && artist && (
+          <>
+            <ArtistBio artist={artist} store={store} />
 
-        {artist && (
-          <Discography
-            albums={artist.albums_without_last_release.items}
-            store={store}
-          />
+            <Discography
+              albums={artist.albums_without_last_release.items}
+              store={store}
+            />
+          </>
         )}
       </main>
 
