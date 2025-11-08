@@ -64,6 +64,8 @@ Search albums by **title**, **release date**, **UPC**, or **album ID**.
      npm run dev --prefix ./client
      ```
 
+5. App runs on http://localhost:5173/
+
 ## 👨‍💻 Development
 
 The project already includes `.env` files for both the **client** and **server**. You can edit these files if you need to change configuration values.
